@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: video-recommendation-app
+    volumes:
+      # Mount the current directory to the app directory in container for development
+      - .:/app
+    # Uncomment the following lines if the application needs to expose a port
+    # ports:
+    #   - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    # To keep the container running interactively, uncomment the next lines:
+    # stdin_open: true
+    # tty: true
+    command: python main.py
