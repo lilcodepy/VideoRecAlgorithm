@@ -1,0 +1,129 @@
+SQLite format 3@  !     !.c
+
+k
+        33Mtablerecommendation_logsrecommendation_logs  CREATE TABLE recommendation_logs (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id TEXT,
+                video_id TEXT,
+                recommendation_score REAL,
+                timestamp TEXT,
+                recommendation_type TEXT,
+                FOREIGN KEY (user_id) REFERENCES user_profiles (user_id),
+                FOREIGN KEY (video_id) REFERENCES videos (id)
+            )i%%tableliked_videosliked_videoCREATE TABLE liked_videos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id TEXT,
+                video_id TEXT,
+                timestamp TEXT,
+                FOREIGN KEY (user_id) REFERENCES user_profiles (user_id),
+                FOREIGN KEY (video_id) REFERENCES videos (id)
+            )P++Ytablesqlite_sequencesqlite_sequenceCREATE TABLE sqlite_sequence(name,seq)      ''Qtablewatch_historywatch_historyCREATE TABLE watch_history (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id TEXT,
+                video_id TEXT,
+                timestamp TEXT,
+                rating REAL,
+                FOREIGN KEY (user_id) REFERENCES user_profiles (user_id),
+                FOREIGN KEY (video_id) REFERENCES videos (id)
+            )^''{tableuser_profilesuser_profilesCREATE TABLE user_profiles (
+                user_id TEXT PRIMARY KEY,
+                preferences TEXT,
+                created_at TEXT,
+                updated_at TEXT
+            )9M'indexsqlite_autoindex_user_profiles_1user_profiles5EtablevideosvideosCREATE TABLE videos (
+                id TEXT PRIMARY KEY,
+                title TEXT NOT NULL,
+                description TEXT,
+                tags TEXT,
+                category TEXT,
+                duration INTEGER,
+                upload_date TEXT,
+                views INTEGER DEFAULT 0,
+                likes INTEGER DEFAULT 0,
+                creator TEXT,
+                embedding BLOB
+N           )+?indexsqlite_autoindex_videos_1videos
+
+
+ !
+!Iu!  <K        -demo_videoDatabase Learning IntroductionAn introduction to database-based algorithm learning["database", "machine learning", "recommendations", "python"]Education2023-05-15AI Research Team#
+Ie                                                                                                                                                                                                            c!!!devops1DevOps EssentialsIntroduction to DevOps practices and tools["devops", "docker", "kubernetes", "ci/cd"]Technology2023-01-20iDevOps Pro@"
+  !'ds1Data Structures and AlgorithmsUnderstanding core computer science concepts["algorithms", "data structures", "computer science", "coding"]Education2023-03-01"MCS University)!
+                                                                                                                                                                                    Eg[!!)mob1Mobile App Development GuideDeveloping cross-platform mobile applications["mobile", "flutter", "ios", "android"]Technolog2023-02-050
+App Developers?
+                Msy!!#web1Building Modern Web ApplicationsCreating responsive web apps with modern frameworks["web development", "javascript", "react", "frontend"]Technology
+                                                                                                                                                                             2023-01-30.Web Masters1
+Gq      !!ml2Deep Learning with TensorFlowAdvanced deep learning techniques using TensorFlow["deep learning", "tensorflow", "neural networks", "advanced"]Education                                 ;mq!+py1Python for Data ScienceUsing Python for data analysis and visualization["python", "data science", "pandas", "matplotlib"]Education  `2023-03-104S!6Data UniversityA
+2023-02-20s
+           AI Academy2
+                      Mgq!!ml1Introduction to Machine LearningBeginner's guide to machine learning concepts["machine learning", "ai", "beginner", "tutorial"]Educatio2023-01-15IAI Academy1
+                                                                                                                                                                                           ?wiid5Financial Planning BasicsEssential financial planning strategies for beginners["finance", "investment", "money", "planning"]Finance2023-02-050
+Money Matters
+             Uc!-vid4Travel to Japan GuideComplete guide to traveling in Japan["travel", "japan", "tourism", "adventure"]Travel
+                                                                                                                               2023-01-30.Wanderlust World
+                                                                                                                                                          7g[!!vid3Cooking Italian PastaLearn to cook authentic Italian pasta at home["cooking", "italian", "pasta", "food"]Food2023-03-104P!4Chef Mario7
+                                                                                                                                                                                                                                                                                                         ;qy!!'vid2Advanced React PatternsExplore advanced React patterns and best practices["react", "javascript", "web development", "frontend"]Technology    `2023-02-20s
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            React Masters<
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Mk!!vid1Python Machine Learning TutorialLearn machine learning with Python from scratch["python", "machine learning", "tutorial", "programming"]Educatio2023-01-15IML Academy
+!demo_video
+           evops1#ds1mob1web1 py1ml2mlvidvidvidvid2     vid1
+;
+oBAweb_dev{}2025-12-14T17:58:33.4009122025-12-14T17:58:33.400912I)AAdata_scientist{}2025-12-14T17:58:31.2701972025-12-14T17:58:31.270197wBAstudent{}2025-12-14T17:58:35.1119972025-12-14T17:58:35.111997eQAAdemo_user{"interests": ["database", "machine learning", "recommendations"], "preferred_categories": ["Education", "Technology"], "min_duration": 600, "max_duration": 3000}2025-12-14T17:58:12.8935632025-12-14T17:58:12.893563DBAuser123{}2025-12-14T17:52:05.9708982025-12-14T17:52:05.970898
+demo_user
+         tudent
+               eb_devata_scientist
+;p5j9                             ser123
+
+
+b
+ .
+
+
+
+  f
+   1
+
+
+
+h
+;                               [    *h4\.`,+8studentpy12025-12-14T17:58:36.396213+7studentml22025-12-14T17:58:36.19085226studentds12025-12-14T17:58:35.785921@25studentml12025-12-14T17:58:35.265464@33333324web_devpy12025-12-14T17:58:34.846052@
+                                                                                                                                                                                                                                                   33web_devmob12025-12-14T17:58:34.604344@/2web_devdevops12025-12-14T17:58:34.002700,1web_devweb12025-12-14T17:58:33.53756420)Adata_scientistml22025-12-14T17:58:32.8544483/)Adata_scientistweb12025-12-14T17:58:32.5965552.)Adata_scientistds12025-12-14T17:58:32.3484929-)Adata_scientistml12025-12-14T17:58:31.864443@2,)Adata_scientistpy12025-12-14T17:58:31.395909++studentpy12025-12-14T17:58:19.824131+*studentml22025-12-14T17:58:19.5985452)studentds12025-12-14T17:58:19.198804@2(studentml12025-12-14T17:58:18.671502@3333332'web_devpy12025-12-14T17:58:18.272625@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                3&web_devmob12025-12-14T17:58:18.030566@/%web_devdevops12025-12-14T17:58:17.458204,$web_devweb12025-12-14T17:58:16.9467612#)Adata_scientistml22025-12-14T17:58:16.2171363")Adata_scientistweb12025-12-14T17:58:15.9448772!)Adata_scientistds12025-12-14T17:58:15.6601669 )Adata_scientistml12025-12-14T17:58:15.190544@2)Adata_scientistpy12025-12-14T17:58:14.764960;!Ademo_userdemo_video2025-12-14T17:58:13.012167@+studentpy12025-12-14T17:53:47.895085+studentml22025-12-14T17:53:47.6174542studentds12025-12-14T17:53:47.093198@2studentml12025-12-14T17:53:46.605754@3333332web_devpy12025-12-14T17:53:46.253618@
+studentds12025-12-14T17:53:04.487190@2                                                                                                                                                                                                                                                                                                                                                                          3web_devmob12025-12-14T17:53:46.001473@/web_devdevops12025-12-14T17:53:45.475082,web_devweb12025-12-14T17:53:44.9698922)Adata_scientistml22025-12-14T17:53:44.2361833)Adata_scientistweb12025-12-14T17:53:43.9215582)Adata_scientistds12025-12-14T17:53:43.6453079)Adata_scientistml12025-12-14T17:53:43.046375@2)Adata_scientistpy12025-12-14T17:53:42.503559;!Ademo_userdemo_video2025-12-14T17:53:40.568840@+studentpy12025-12-14T17:53:05.333876+studentml22025-12-14T17:53:05.0201222
+                                      studentml12025-12-14T17:53:03.959884@3333332
+                                                                                  web_devpy12025-12-14T17:53:03.556392@
+                                                                                                                       3
+=liked_vp>b.s#3recommendation_logs''watch_history8ops12025-12-14T17:53:02.731009web_devweb12025-12-14T17:53:02.2341782)Adata_scientistml22025-12-14T17:53:01.5887283)Adata_scientistweb12025-12-14T17:53:01.3337502)Adata_scientistds12025-12-14T17:53:01.0801029)Adata_scientistml12025-12-14T17:53:00.513226@2)Adata_scientistpy12025-12-14T17:53:00.037009,user123vid22025-12-14T17:52:06.314906,user123vid12025-12-14T17:52:06.094541
+
+
+
+V
+ $
+
+
+
+  l
+   A
+
+
+
+
+T
+)Adata_scientistml22025-12-14T17:53:44.5502050T17:58:36.632096)"studentds12025-12-14T17:58:36.003499)!studentml12025-12-14T17:58:35.542002- web_devdevops12025-12-14T17:58:34.329358*web_devweb12025-12-14T17:58:33.7783400)Adata_scientistml22025-12-14T17:58:33.1220130)Adata_scientistml12025-12-14T17:58:32.1103090)Adata_scientistpy12025-12-14T17:58:31.633052)studentpy12025-12-14T17:58:20.047689)studentds12025-12-14T17:58:19.407015)studentml12025-12-14T17:58:18.966585-web_devdevops12025-12-14T17:58:17.737073*web_devweb12025-12-14T17:58:17.1994170)Adata_scientistml22025-12-14T17:58:16.4787130)Adata_scientistml12025-12-14T17:58:15.4237110)Adata_scientistpy12025-12-14T17:58:15.0046012!Ademo_userdemo_video2025-12-14T17:58:13.298750)studentpy12025-12-14T17:53:48.146218)studentds12025-12-14T17:53:47.340744)studentml12025-12-14T17:53:46.863363-web_devdevops12025-12-14T17:53:45.736532*web_devweb12025-12-14T17:53:45.2139900
+                                              )Adata_scientistml12025-12-14T17:53:43.3509770
+                                                                                            )Adata_scientistpy12025-12-14T17:53:42.7880192
+&yJo-o_userdemo_video2025-12-14T17:53:40.812948)        studentpy12025-12-14T17:53:05.570392studentds12025-12-14T17:53:04.758196)studentml12025-12-14T17:53:04.228865-web_devdevops12025-12-14T17:53:03.007735*web_devweb12025-12-14T17:53:02.4754660)Adata_scientistml22025-12-14T17:53:01.8539010)Adata_scientistml12025-12-14T17:53:00.7451350)Adata_scientistpy12025-12-14T17:53:00.280505*user123vid12025-12-14T17:52:06.561551
+
+
+ I
+
+
+  }
+   5
+
+
+i
+                        F     3YEy@'%studentvid4?2025-12-14T17:58:37.878485personalizedF&%studentdemo_video?,2p2025-12-14T17:58:37.768383personalized@%%studentvid1?/'`42025-12-14T17:58:37.647467personalizedF$%web_devdemo_video?32025-12-14T17:58:37.488295personalized?#%web_devds1?1?2025-12-14T17:58:37.387072personalized@"%web_devvid2?WAp2025-12-14T17:58:37.286628personalizedG!)A%data_scientistvid2?a2025-12-14T17:58:37.125627personalizedM )!A%data_scientistdemo_video?^Q&j2025-12-14T17:58:37.007453personalizedG)A%data_scientistvid1?ۢxu2025-12-14T17:58:36.909498personalized@%studentvid4?2025-12-14T17:58:21.463739personalizedF%studentdemo_video?,2o2025-12-14T17:58:21.333298personalized@%studentvid1?/'`42025-12-14T17:58:21.223048personalizedF%web_devdemo_video?12025-12-14T17:58:21.043966personalized?%web_devds1?1?2025-12-14T17:58:20.922789personalized@%web_devvid2?WAo2025-12-14T17:58:20.806980personalizedG)A%data_scientistvid2?a2025-12-14T17:58:20.638409personalizedM)!A%data_scientistdemo_vid)A%data_scientistvid1?ۢxu2025-12-14T17:53:48.432710personalizedCvid1?ۢxu2025-12-14T17:58:20.381852personalized@%studentvid4?2025-12-14T17:53:49.593803personalizedF%studentdemo_video?,2p2025-12-14T17:53:49.482869personalized@%studentvid1?/'`42025-12-14T17:53:49.368137personalizedF%web_devdemo_video?32025-12-14T17:53:49.209450personalized?%web_devds1?1?2025-12-14T17:53:49.045707personalized@%web_devvid2?WAp2025-12-14T17:53:48.921260personalizedG)A%data_scientistvid2?a2025-12-14T17:53:48.717351personalizedM)!A%data_scientistdemo_video?^Q&j2025-12-14T17:53:48.597571personalizedG
+                                                               %studentdevops1?(u2025-12-14T17:53:07.072520personalized@
+                                                                                                                        %studentvid4?a:2025-12-14T17:53:06.947924personalized@
+%studentvid1?wI.2025-12-14T17:53:06.828513personalized@ %web_devvid1?&/=I2025-12-14T17:53:06.642380personalized%web_devds1?>ʋ2025-12-14T17:53:06.484229personalized@%web_devvid2?"^QȺ2025-12-14T17:53:06.342120personalizedG)A%data_scientistvid4?6G2025-12-14T17:53:06.127235personalizedG)A%data_scientistvid2?3Ҫ2025-12-14T17:53:06.015567personalizedG)A%data_scientistvid1?ފ) \R2025-12-14T17:53:05.889093personalized%user123vid52025-12-14T17:52:07.608318personalized%user123vid42025-12-14T17:52:07.490056personalized@%user123vid3?t2025-12-14T17:52:07.367106personalized
